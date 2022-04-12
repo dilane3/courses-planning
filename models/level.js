@@ -17,7 +17,8 @@ Level.init({
 }, {
   sequelize,
   modelName: "Level",
-  tableName: 'niveau'
+  tableName: 'niveau',
+  timestamps: false
 })
 
 export default Level

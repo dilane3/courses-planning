@@ -17,7 +17,8 @@ Room.init({
 }, {
   sequelize,
   modelName: "Room",
-  tableName: 'salle'
+  tableName: 'salle',
+  timestamps: false
 })
 
 export default Room

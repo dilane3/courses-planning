@@ -22,7 +22,8 @@ Subject.init({
 }, {
   sequelize, // We need to pass the connection instance
   modelName: 'Subject',
-  tableName: 'cours'
+  tableName: 'cours',
+  timestamps: false
 });
 
 // Relation between Subject and Room

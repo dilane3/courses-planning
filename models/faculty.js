@@ -17,7 +17,8 @@ Faculty.init({
 }, {
   sequelize,
   modelName: "Faculty",
-  tableName: 'filiere'
+  tableName: 'filiere',
+  timestamps: false
 })
 
 export default Faculty

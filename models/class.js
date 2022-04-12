@@ -19,14 +19,14 @@ Class.init({
 }, {
   sequelize,
   modelName: "Class",
-  tableName: 'classe'
+  tableName: 'classe',
+  timestamps: false
 })
 
 // Relation between Class and Faculty
 Class.belongsTo(Faculty, {
   foreignKey: {
-    type: DataTypes.INTEGER,
-    name: "idFil"
+    type: DataTypes.INTEGER
   }
 })
 Faculty.hasMany(Class)
@@ -34,8 +34,7 @@ Faculty.hasMany(Class)
 // Relation between Class and Level
 Class.belongsTo(Level, {
   foreignKey: {
-    type: DataTypes.INTEGER,
-    name: "idNiv"
+    type: DataTypes.INTEGER
   }
 })
 Level.hasMany(Class)

@@ -30,7 +30,8 @@ Teaching.init({
 }, {
   sequelize,
   modelName: "Teaching",
-  tableName: 'enseigner'
+  tableName: 'enseigner',
+  timestamps: false
 })
 
 // Relation between Teacher and Subject

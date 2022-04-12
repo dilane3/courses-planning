@@ -36,7 +36,8 @@ Program.init({
 }, {
   sequelize,
   modelName: "Program",
-  tableName: 'programmer'
+  tableName: 'programmer',
+  timestamps: false
 })
 
 // Relation between Teacher and Subject

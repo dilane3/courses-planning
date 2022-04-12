@@ -17,7 +17,8 @@ Speciality.init({
 }, {
   sequelize,
   modelName: "Speciality",
-  tableName: 'specialite'
+  tableName: 'specialite',
+  timestamps: false
 })
 
 export default Speciality

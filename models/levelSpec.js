@@ -29,7 +29,8 @@ LevelSpec.init({
 }, {
   sequelize,
   modelName: "LevelSpec",
-  tableName: 'niv_spec'
+  tableName: 'niv_spec',
+  timestamps: false
 })
 
 // Relation between Teacher and Subject

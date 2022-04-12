@@ -5,4 +5,9 @@ const sequelize = new Sequelize('sequelize', 'root', '', {
   dialect: 'mysql'
 });
 
+// const sequelize = new Sequelize({
+//   dialect: 'sqlite',
+//   storage: '../db.sqlite'
+// })
+
 export default sequelize

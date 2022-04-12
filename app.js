@@ -13,6 +13,10 @@ import sequelize from "./utils/database.js";
 
 // Routers
 import RoomRouter from './routers/room.js'
+import ProgramRouter from "./routers/program.js";
+import FacultyRouter from "./routers/faculty.js";
+import LevelRouter from "./routers/level.js";
+import ClassRouter from "./routers/class.js";
 
 const app = express()
 
@@ -31,7 +35,12 @@ app.get("/", (req, res) => {
 })
 
 app.use("/room", RoomRouter)
+app.use("/program", ProgramRouter)
+app.use("/faculty", FacultyRouter)
+app.use("/level", LevelRouter)
+app.use("/class", ClassRouter)
 
+// Launch the app
 app.listen(PORT, async () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 

@@ -17,7 +17,8 @@ Teacher.init({
 }, {
   sequelize,
   modelName: "Teacher",
-  tableName: 'enseignant'
+  tableName: 'enseignant',
+  timestamps: false
 })
 
 export default Teacher

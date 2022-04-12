@@ -8,8 +8,14 @@
     "start": "nodemon app.js"
   },
   "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.9",
+    "cors": "^2.8.5",
     "express": "^4.17.3",
+    "global": "^4.4.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "node-pre-gyp": "^0.17.0"
   }
 }
