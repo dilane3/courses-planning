@@ -1,6 +1,6 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../utils/database.js';
-import Room from './room.js';
+import Class from './class.js';
 import Speciality from './speciality.js';
 
 
@@ -26,20 +26,18 @@ Subject.init({
   timestamps: false
 });
 
-// Relation between Subject and Room
-Subject.belongsTo(Room, {
+// Relation between Subject and Class
+Subject.belongsTo(Class, {
   foreignKey: {
-    type: DataTypes.INTEGER,
-    name: "idClasse"
+    type: DataTypes.INTEGER
   }
 })
-Room.hasOne(Subject)
+Class.hasOne(Subject)
 
 // Relation between Subject and Speciality
 Subject.belongsTo(Speciality, {
   foreignKey: {
-    type: DataTypes.INTEGER,
-    name: "idSpec"
+    type: DataTypes.INTEGER
   }
 })
 Speciality.hasOne(Subject)

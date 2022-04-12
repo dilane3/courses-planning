@@ -17,8 +17,10 @@ class ClassController {
     } = req.body
 
     if (nom && idFaculty && idLevel) {
-      const verification = await ClassController.verifyFacultyAndLevel(idFaculty, idLevel)
-      
+      const { verifyFacultyAndLevel } = ClassController
+
+      const verification = await verifyFacultyAndLevel(idFaculty, idLevel)
+
       if (verification) {
         const classe = Class.build({
           nomClasse: nom,

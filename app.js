@@ -12,11 +12,13 @@ import LevelSpec from "./models/levelSpec.js";
 import sequelize from "./utils/database.js";
 
 // Routers
-import RoomRouter from './routers/room.js'
+import RoomRouter from './routers/room.js';
 import ProgramRouter from "./routers/program.js";
 import FacultyRouter from "./routers/faculty.js";
 import LevelRouter from "./routers/level.js";
 import ClassRouter from "./routers/class.js";
+import SubjectRouter from "./routers/subject.js";
+import SpecialityRouter from "./routers/speciality.js";
 
 const app = express()
 
@@ -39,6 +41,11 @@ app.use("/program", ProgramRouter)
 app.use("/faculty", FacultyRouter)
 app.use("/level", LevelRouter)
 app.use("/class", ClassRouter)
+app.use("/subject", SubjectRouter)
+app.use("/speciality", SpecialityRouter)
+app.use("/teacher", SpecialityRouter)
+app.use("/teaching", SpecialityRouter)
+app.use("/level_spec", SpecialityRouter)
 
 // Launch the app
 app.listen(PORT, async () => {
